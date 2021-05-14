@@ -1,0 +1,31 @@
+.header {
+	$self: &;
+	// @include outline(red);
+	
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 120px;
+	}
+
+	&__logo {
+		display: none;
+		
+		@include media('<=sm') {
+			display: block;			
+		}
+	}
+
+	&__menu {
+		
+	}
+	
+	&__menu-open {
+		display: none;
+		
+		@include media('<=sm') {
+			display: block;			
+		}
+	}
+}

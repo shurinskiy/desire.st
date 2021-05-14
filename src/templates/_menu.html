@@ -1,0 +1,13 @@
+<nav class="header__menu menu">
+	<button class="menu__btn-close"></button>
+	<ul class="menu__list">
+		<li class="menu__list-item @@if(this.about){active}"><a href="./about.html">About</a></li>
+		<li class="menu__list-item@@if(this.gallery){active}"><a href="./gallery.html">Gallery</a></li>
+	</ul>
+	<a href="./" class="menu__logo"><img src="./images/logo.png" alt=""></a>
+	<ul class="menu__list">
+		<li class="menu__list-item @@if(this.blog){active}"><a href="./blog.html">Blog</a></li>
+		<li class="menu__list-item @@if(this.contact){active}"><a href="./contact.html">Contact</a></li>
+	</ul>
+</nav>
+<button class="header__menu-open menu__btn-open"></button>

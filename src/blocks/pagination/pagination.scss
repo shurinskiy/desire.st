@@ -1,0 +1,29 @@
+.pagination {
+	$self: &;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 60px;
+
+	&__item {
+		margin: 0 5px;
+		text-decoration: none;
+		color: inherit;
+
+		&_prev {
+			
+		}
+
+		&_link {
+			
+		}
+
+		&_current {
+			font-family: "OSB", sans-serif;
+		}
+
+		&_next {
+			
+		}
+	}
+
+}

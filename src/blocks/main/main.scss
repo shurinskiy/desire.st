@@ -1,0 +1,40 @@
+.main {
+	$self: &;
+	display: grid;
+	grid-template-columns: auto 360px;
+	grid-gap: 30px;
+	
+	@include media('<=md') {
+		grid-template-columns: auto 35%;
+	}
+	
+	@include media('<=sm') {
+		grid-template: repeat(2, auto) / auto;
+	}
+
+	&__aside {
+		@include media('<=sm') {
+			order: -1;
+		}
+	}
+
+	&__content {
+		min-width: 100%;
+	}
+
+	&__article {
+		margin-bottom: 40px;
+	}
+
+	&__tags {
+		margin-bottom: 30px;
+	}
+	
+	&__siblings {
+		margin-bottom: 40px;
+	}
+
+	&__comments {
+		margin-bottom: 90px;
+	}
+}

@@ -1,0 +1,22 @@
+.tags {
+	$self: &;
+
+	&__title {
+		font-family: "MB", sans-serif;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	&__item {
+		display: inline-block;
+		text-decoration: none;
+		color: #8f8d8d;
+		border: 1px solid #8f8d8d;
+		border-radius: 20px;
+		font-family: "OSB", sans-serif;
+		line-height: 1.1;
+		font-size: 14px;
+		padding: 5px 15px 6px;
+		margin: 0 7px 10px 0;
+	}
+}

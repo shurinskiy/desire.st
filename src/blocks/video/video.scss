@@ -1,0 +1,36 @@
+.video {
+	$self: &;
+	min-height: 400px;
+	background: url('./images/bg-video.png') center / auto no-repeat transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 100px;
+
+	&__play {
+		display: block;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		background-color: rgba(60, 60, 60, 0.4);
+		transition: background-color 0.3s ease;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	
+		&::before {
+			content: '';
+			width: 0; 
+			height: 0;
+			border-top: 18px solid transparent;
+			border-left: 32px solid #fff;
+			border-bottom: 18px solid transparent;
+			margin-left: 8px;
+			filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+		}
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+	}
+}

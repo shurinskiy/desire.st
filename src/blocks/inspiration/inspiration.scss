@@ -1,0 +1,97 @@
+.inspiration {
+	$self: &;
+	background: url('./images/bg-inspiration.png') bottom center / auto no-repeat transparent;
+	padding-bottom: 40px;
+	margin-bottom: 80px;
+
+	&__inner {
+		box-sizing: border-box;
+		max-width: 1500px;
+		padding: 0 15px;
+		margin: 0 auto;
+		display: flex;
+	}
+
+	&__image {
+		flex-shrink: 0;
+		
+		@include media('<=lg') {
+			flex-shrink: 1;
+			min-width: 40%;
+		}
+		
+		@include media('<=xs') {
+			display: none;
+		}
+	}
+
+	&__content {
+		padding: 20px 180px 0 70px;
+		
+		@include media('<=lg') {
+			padding: 20px 100px 0 70px;
+		}
+		
+		@include media('<=md') {
+			padding: 20px 50px 0 50px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 20px 0 0;
+		}
+	}
+
+	&__title {
+		font-family: "MB", sans-serif;
+		font-size: 36px;
+		color: $black;
+		margin-bottom: 25px;
+		
+		&::after {
+			content: '';
+			display: block;
+			height: 0;
+			border-bottom: 2px solid #979797;
+			width: 200px;
+			padding-top: 20px;
+		}
+	}
+
+	&__text {
+		line-height: 1.8;
+		margin-bottom: 60px;
+	}
+
+	&__list {
+
+	}
+
+	&__item {
+		margin-bottom: 40px;
+	}
+
+	&__item-info {
+		font-family: "MB", sans-serif;
+		color: $black;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 15px;
+	}
+
+	&__item-progress {
+		display: block;
+		height: 2px;
+		border-radius: 1px;
+		background-color: white;
+		position: relative;
+		
+		span {
+			position: absolute;
+			display: block;			
+			border-radius: 1px;
+			background-color: $black;
+			left: 0; top: 0;
+			height: 100%;
+		}
+	}
+}

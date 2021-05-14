@@ -1,0 +1,100 @@
+.menu {
+	$self: &;
+	display: flex;
+	flex: 1 1 auto;
+	align-items: center;
+	
+	@include media('<=sm') {
+		display: block;
+		position: fixed;
+		height: 100vh;
+		z-index: 9999;
+		right: -310px; top: 0;
+		box-sizing: border-box;
+		max-width: 300px;
+		width: 100%;
+		padding: 50px 0px 30px;
+		background-color: #fff;
+		box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+		transition: right 0.3s ease-in;
+		overflow: auto;
+		
+		&.opened {
+			right: 0;
+		}
+	}
+
+	&__list {
+		display: flex;
+		
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+	
+	&__list-item {
+		padding: 0 45px;
+		
+		a {
+			display: inline-block;
+			padding: 5px 0;
+			position: relative;
+			font-family: "MB", sans-serif;
+			line-height: 1.2;
+			text-decoration: none;
+			color: #363838;
+		}
+
+		&.active a::after {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0; bottom: 0; right: 0;
+			height: 2px;
+			border-radius: 1px;
+			background-color: rgba($black, 0.7);
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__logo {
+		margin: 0 auto;
+		line-height: 0;
+		
+		@include media('<=sm') {
+			display: none;			
+		}
+	}
+
+	&__btn-open {
+		width: 37px;
+		height: 29px;
+		background: url('#{$images-path}icons-sprite.svg#icon-menu-open-view-black') center / 37px 29px no-repeat transparent;
+		padding: 0;
+		outline: none;
+		appearance: none;
+		border: none;
+		cursor: pointer;
+	}
+
+	&__btn-close {
+		display: none;
+		border: none;
+		appearance: none;
+		outline: none;
+		width: 20px;
+		height: 20px;
+		background: url('#{$images-path}icons-sprite.svg#icon-menu-close-view-black') center / 25px 25px no-repeat transparent;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		cursor: pointer;
+		
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+}

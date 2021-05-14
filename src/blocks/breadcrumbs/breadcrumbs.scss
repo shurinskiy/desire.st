@@ -1,0 +1,33 @@
+.breadcrumbs {
+	$self: &;
+	background-color: #dfdfdf;
+	padding: 20px 0;
+	margin-bottom: 60px;
+
+	&_nopad {
+		margin-bottom: 0;
+	}
+
+	&__list {
+		display: flex;
+		font-size: 14px;
+	}
+
+	&__link {
+
+		a {
+			text-decoration: none;
+			color: inherit;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&:not(:last-child)::after {
+			display: inline-block;
+			content: '/';
+			margin: 0 5px;
+		}
+	}
+}

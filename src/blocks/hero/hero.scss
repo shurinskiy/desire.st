@@ -1,0 +1,153 @@
+.hero {
+	$self: &;
+	margin-bottom: 100px;
+	background: url('./images/bg-hero.png') top center no-repeat transparent;
+	
+	@include media('<=xxlg') {
+		background-position: top -100px center;
+	}
+	
+	@include media('<=xlg') {
+		background-position: top -200px center;
+	}
+	
+	@include media('<=lg') {
+		background-position: top -250px center;
+	}
+	
+	@include media('<=md') {
+		background-position: top -350px center;
+	}
+
+	&__inner {
+		max-width: 1500px;
+		padding: 0 40px;
+		margin: 0 auto;
+		
+		@include media('<=sm') {
+			padding: 70px 40px 60px;
+		}
+		
+		@include media('<=xxs') {
+			padding: 70px 20px 60px;
+		}
+	}
+
+	&__slider {
+		.owl-dots {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__item {
+		display: flex;
+	}
+
+	&__slider-img {
+		flex-shrink: 0;
+		width: 700px;
+	
+		@include media('<=xxlg') {
+			width: 600px;
+		}
+	
+		@include media('<=xlg') {
+			width: 500px;
+		}
+	
+		@include media('<=lg') {
+			width: 450px;
+		}
+	
+		@include media('<=md') {
+			width: 350px;
+		}
+	
+		@include media('<=sm') {
+			display: none;
+		}
+	}
+
+	&__slider-info {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		max-width: 580px;
+		padding-left: 20px;
+	}
+
+	&__slider-title {
+		color: $black;
+		font-family: "MB", sans-serif;
+		font-size: 110px;
+		line-height: 1.2;
+		margin-bottom: 30px;
+		
+		@include media('<=xlg') {
+			font-size: 90px;
+			line-height: 1.1;
+		}
+		
+		@include media('<=lg') {
+			font-size: 70px;
+		}
+		
+		@include media('<=md') {
+			font-size: 58px;
+			margin-bottom: 20px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 50px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 44px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 40px;
+		}
+		
+		&::after {
+			content: '';
+			display: block;
+			height: 0;
+			border-bottom: 1px solid #979797;
+			width: 200px;
+			padding-top: 30px;
+			
+			@include media('<=md') {
+				padding-top: 20px;
+			}
+		}
+	}
+
+	&__slider-text {
+		line-height: 1.8;
+		
+		@include media('<=md') {
+			font-size: 14px;
+			line-height: 1.7;
+		}
+	}
+
+	&__slider-dot {
+		border: none;
+		appearance: none;
+		outline: none;
+		padding: 0;
+		background-color: $grey;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		margin: 0 15px;
+		cursor: pointer;
+
+		&.active {
+			background-color: #FFEF35;
+		}
+	}
+
+}

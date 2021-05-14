@@ -1,0 +1,62 @@
+.info {
+	$self: &;
+	margin-bottom: 70px;
+
+	&__head {
+		min-height: 400px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./images/bg-about.jpg') top center / auto no-repeat transparent;
+		margin-bottom: 130px;
+	}
+
+	&__head-title {
+		font-family: "MB", sans-serif;
+		font-size: 60px;
+		color: $black;
+	}
+	
+	&__content {
+		
+	}
+	
+	&__title {
+		font-family: "MB", sans-serif;
+		font-size: 36px;
+		color: $black;
+		max-width: 820px;
+		line-height: 1.5;
+		margin-bottom: 50px;
+				
+		&::after {
+			content: '';
+			display: block;
+			height: 0;
+			border-bottom: 2px solid #979797;
+			width: 200px;
+			padding-top: 20px;
+		}
+	}
+
+	&__text {
+		padding-left: 280px;
+		
+		@include media('<=md') {
+			padding-left: 180px;
+		}
+		
+		@include media('<=sm') {
+			padding-left: 100px;
+		}
+		
+		@include media('<=xs') {
+			padding-left: 0;
+		}
+		
+		p {
+			margin-bottom: 30px;
+			line-height: 1.5;
+		}
+	}
+}
